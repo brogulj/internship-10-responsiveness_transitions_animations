@@ -6,7 +6,7 @@
 }
 
 .main__title {
-    text-align: center;
+    margin-left: 12.5vw;
     padding: 50px 0;
 }
 
@@ -134,6 +134,22 @@
     animation: slideshow 24s infinite 18s;
 }
 
+.partners {
+    display: flex;
+    width: 75vw;
+    margin: 0 12.5vw ;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.partner {
+    flex-basis: 50%;
+    margin-top: 20px;
+    margin-right: 8%;
+}
+.partner img{
+    width: 100%;
+}
+
 @keyframes slideshow {
     from {
         opacity: 0;
@@ -170,5 +186,80 @@
     to {
         opacity: 0;
         z-index: 0;
+    }
+}
+
+@media screen and (min-width:463px) and (max-width: 750px) {
+    .partner {
+        flex-basis: 40%;
+    }
+}
+@media screen and (min-width:750px) and (max-width: 1008px) {
+    .partner {
+        flex-basis: 25%;
+    }
+}
+@media screen and (min-width:1008px){
+    .partner {
+        flex-basis: 15%;
+    }
+}
+@media screen and (min-width:750px){
+    .general__sponsor {
+        flex-direction: row;
+        position: relative;
+        box-shadow: none;
+    }
+    .general__sponsor .image__holder {
+        height: inherit;
+        width: 37.5vw;
+        flex-shrink: 0;
+    }
+    .general__sponsor .image__holder img{
+        height: 40%;
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+    }
+    .general__sponsor .sponsor__title {
+        top: 190px;
+        right: 50%;
+        width: 200px;
+        height: 140px;
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+    }
+    .general__logo {
+        position: absolute;
+        top: 0px;
+        left: calc(50% - 30px);
+    }
+    .general__sponsor p{
+        position: relative;
+        padding-top: 100px;
+        top:-80px;
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+    }
+    .gold__sponsor {
+        box-shadow: none;
+        width: 30vw;
+        margin-bottom: -200px;
+    }
+    .gold__sponsor:last-child {
+        margin: 0;
+    }
+    .gold__sponsor .image__holder {
+        width: 110%;
+        align-self: flex-end;
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+    }
+    .gold__sponsor:nth-child(2n-1) .image__holder{
+        right: -10%;
+    }
+    .gold__sponsor .sponsor__title {
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+    }
+    .gold__sponsor p {
+        box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
+        position: relative;
+        padding-top: 100px;
+        top: -100px;
     }
 }
