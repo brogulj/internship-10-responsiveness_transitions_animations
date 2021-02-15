@@ -209,6 +209,7 @@
         flex-direction: row;
         position: relative;
         box-shadow: none;
+        margin-bottom: 200px;
     }
     .general__sponsor .image__holder {
         height: inherit;
@@ -220,7 +221,7 @@
         box-shadow: 0px 21px 46px 0px rgba(0,0,0,0.16);
     }
     .general__sponsor .sponsor__title {
-        top: 190px;
+        top: calc(40% - 70px);
         right: 50%;
         width: 200px;
         height: 140px;
@@ -240,10 +241,11 @@
     .gold__sponsor {
         box-shadow: none;
         width: 30vw;
-        margin-bottom: -200px;
+        margin-top: -200px;
+        margin-bottom: 0px;
     }
-    .gold__sponsor:last-child {
-        margin: 0;
+    .sponsors:first-of-type() .gold__sponsor {
+        margin-top: 100px;
     }
     .gold__sponsor .image__holder {
         width: 110%;
@@ -261,5 +263,11 @@
         position: relative;
         padding-top: 100px;
         top: -100px;
+    }
+    .gold__logo {
+        left: -35px;
+    }
+    .gold__sponsor:nth-of-type(2n-1) .gold__logo{
+        right: -35px;
     }
 }
